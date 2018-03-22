@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 
@@ -16,18 +16,19 @@
  * @return int
  */
 int Rook::getValue() {
-    return 0;
+  return 0;
 }
 
 /**
  * @param location
  * @return boolean
  */
-bool Rook::canMoveTo(Square& location) {
-    return false;
+bool Rook::canMoveTo(Square &location) {
+  return false;
 }
 
 string Rook::getPieceSymbol() {
-    return PIECE_SYMBOL;
+  return PIECE_SYMBOL;
 }
-Rook::Rook(const string &color, Square *location) : Piece(color, location){}
+Rook::Rook(const string &color, Square *location) : RestrictedPiece(color,
+                                                                    location) {}

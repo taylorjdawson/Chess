@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 
@@ -17,15 +17,16 @@
  * @param byPlayer
  * @return boolean
  */
-bool RestrictedPiece::moveTo(Square& location, Player& byPlayer) {
-    return false;
+bool RestrictedPiece::moveTo(Square &location, Player &byPlayer) {
+  return false;
 }
 
 /**
  * @return boolean
  */
 bool RestrictedPiece::hasMoved() {
-    return false;
+  return false;
 }
 
-RestrictedPiece::RestrictedPiece(const string &color, Square *location) : Piece::Piece(color, location) {}
+RestrictedPiece::RestrictedPiece(const string &color, Square *location)
+    : Piece::Piece(color, location) {}

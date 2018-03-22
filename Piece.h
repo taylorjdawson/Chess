@@ -71,16 +71,4 @@ class Piece {
   }
 };
 
-/*namespace std
-{
-template <>
-struct hash<Piece>
-{
-  size_t operator()(const Piece& piece) const
-  {
-    // Compute individual hash values for two data members and combine them using XOR and bit shifting
-    return ((hash<float>()(piece._color)) ^ (hash<float>()(piece._location) << 1) >> 1);
-  }
-};
-}*/
 #endif //_PIECE_H

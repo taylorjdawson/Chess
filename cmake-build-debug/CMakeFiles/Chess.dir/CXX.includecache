@@ -6,14 +6,36 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/taylo/CLionProjects/Chess/Bishop.cpp
+Bishop.h
+C:/Users/taylo/CLionProjects/Chess/Bishop.h
+
 C:/Users/taylo/CLionProjects/Chess/Bishop.h
 Piece.h
 C:/Users/taylo/CLionProjects/Chess/Piece.h
 
+C:/Users/taylo/CLionProjects/Chess/Board.cpp
+iostream
+-
+Board.h
 C:/Users/taylo/CLionProjects/Chess/Board.h
+typeinfo
+-
+
+C:/Users/taylo/CLionProjects/Chess/Board.h
+map
+-
+Square.h
+C:/Users/taylo/CLionProjects/Chess/Square.h
+
+C:/Users/taylo/CLionProjects/Chess/Game.cpp
+Game.h
+C:/Users/taylo/CLionProjects/Chess/Game.h
 
 C:/Users/taylo/CLionProjects/Chess/Game.h
 bitset
+-
+iostream
 -
 Player.h
 C:/Users/taylo/CLionProjects/Chess/Player.h
@@ -32,19 +54,33 @@ C:/Users/taylo/CLionProjects/Chess/Bishop.h
 Knight.h
 C:/Users/taylo/CLionProjects/Chess/Knight.h
 
+C:/Users/taylo/CLionProjects/Chess/King.cpp
+King.h
+C:/Users/taylo/CLionProjects/Chess/King.h
+
 C:/Users/taylo/CLionProjects/Chess/King.h
 RestrictedPiece.h
 C:/Users/taylo/CLionProjects/Chess/RestrictedPiece.h
+
+C:/Users/taylo/CLionProjects/Chess/Knight.cpp
+Knight.h
+C:/Users/taylo/CLionProjects/Chess/Knight.h
 
 C:/Users/taylo/CLionProjects/Chess/Knight.h
 Piece.h
 C:/Users/taylo/CLionProjects/Chess/Piece.h
 
+C:/Users/taylo/CLionProjects/Chess/Pawn.cpp
+Pawn.h
+C:/Users/taylo/CLionProjects/Chess/Pawn.h
+
 C:/Users/taylo/CLionProjects/Chess/Pawn.h
 RestrictedPiece.h
 C:/Users/taylo/CLionProjects/Chess/RestrictedPiece.h
-Square.h
-C:/Users/taylo/CLionProjects/Chess/Square.h
+
+C:/Users/taylo/CLionProjects/Chess/Piece.cpp
+Piece.h
+C:/Users/taylo/CLionProjects/Chess/Piece.h
 
 C:/Users/taylo/CLionProjects/Chess/Piece.h
 ostream
@@ -54,6 +90,10 @@ string
 Square.h
 C:/Users/taylo/CLionProjects/Chess/Square.h
 
+C:/Users/taylo/CLionProjects/Chess/Player.cpp
+Player.h
+C:/Users/taylo/CLionProjects/Chess/Player.h
+
 C:/Users/taylo/CLionProjects/Chess/Player.h
 string
 -
@@ -62,9 +102,17 @@ vector
 set
 -
 
+C:/Users/taylo/CLionProjects/Chess/Queen.cpp
+Queen.h
+C:/Users/taylo/CLionProjects/Chess/Queen.h
+
 C:/Users/taylo/CLionProjects/Chess/Queen.h
 Piece.h
 C:/Users/taylo/CLionProjects/Chess/Piece.h
+
+C:/Users/taylo/CLionProjects/Chess/RestrictedPiece.cpp
+RestrictedPiece.h
+C:/Users/taylo/CLionProjects/Chess/RestrictedPiece.h
 
 C:/Users/taylo/CLionProjects/Chess/RestrictedPiece.h
 Square.h
@@ -72,9 +120,17 @@ C:/Users/taylo/CLionProjects/Chess/Square.h
 Piece.h
 C:/Users/taylo/CLionProjects/Chess/Piece.h
 
+C:/Users/taylo/CLionProjects/Chess/Rook.cpp
+Rook.h
+C:/Users/taylo/CLionProjects/Chess/Rook.h
+
 C:/Users/taylo/CLionProjects/Chess/Rook.h
 RestrictedPiece.h
 C:/Users/taylo/CLionProjects/Chess/RestrictedPiece.h
+
+C:/Users/taylo/CLionProjects/Chess/Square.cpp
+Square.h
+C:/Users/taylo/CLionProjects/Chess/Square.h
 
 C:/Users/taylo/CLionProjects/Chess/Square.h
 Piece.h
@@ -83,12 +139,10 @@ C:/Users/taylo/CLionProjects/Chess/Piece.h
 C:/Users/taylo/CLionProjects/Chess/chess.cpp
 iostream
 -
-Game.h
-C:/Users/taylo/CLionProjects/Chess/Game.h
-Piece.h
-C:/Users/taylo/CLionProjects/Chess/Piece.h
 Board.h
 C:/Users/taylo/CLionProjects/Chess/Board.h
+Game.h
+C:/Users/taylo/CLionProjects/Chess/Game.h
 King.h
 C:/Users/taylo/CLionProjects/Chess/King.h
 

@@ -12,20 +12,20 @@
 
 class Player;
 
-class RestrictedPiece: public Piece {
-public:
+class RestrictedPiece : public Piece {
+ public:
 
 /**
      * @param location
      * @param byPlayer
      */
-    bool moveTo(Square& location, Player& byPlayer);
-protected:
+  bool moveTo(Square &location, Player &byPlayer);
+ protected:
   RestrictedPiece(const string &color, Square *location);
   bool hasMoved();
-private:
+ private:
 
-    bool moved = false;
+  bool moved = false;
 };
 
 #endif //_RESTRICTEDPIECE_H

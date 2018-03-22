@@ -25,17 +25,13 @@ class Square {
 
   Piece *getOccupant();
 
-  void setOccupant(Piece *occupant)
-  {
-    _occupant = occupant;
-  }
-
+  void setOccupant(Piece *occupant);
 
   bool operator==(const Square &square) const;
  private:
   int _rank;
   int _file;
-  Piece* _occupant;
+  Piece *_occupant;
 };
 
 #endif //_SQUARE_H

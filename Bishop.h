@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 

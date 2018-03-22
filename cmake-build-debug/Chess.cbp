@@ -82,6 +82,78 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Bishop.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Bishop.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Board.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Board.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Game.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Game.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/King.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/King.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Knight.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Knight.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Pawn.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Pawn.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Piece.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Piece.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Player.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Player.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Queen.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Queen.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/RestrictedPiece.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/RestrictedPiece.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Rook.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Rook.h">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Square.cpp">
+			<Option target="Chess"/>
+		</Unit>
+		<Unit filename="C:/Users/taylo/CLionProjects/Chess/Square.h">
+			<Option target="Chess"/>
+		</Unit>
 		<Unit filename="C:/Users/taylo/CLionProjects/Chess/chess.cpp">
 			<Option target="Chess"/>
 		</Unit>

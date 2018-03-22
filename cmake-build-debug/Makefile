@@ -122,6 +122,330 @@ Chess/fast:
 	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/build
 .PHONY : Chess/fast
 
+Bishop.obj: Bishop.cpp.obj
+
+.PHONY : Bishop.obj
+
+# target to build an object file
+Bishop.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Bishop.cpp.obj
+.PHONY : Bishop.cpp.obj
+
+Bishop.i: Bishop.cpp.i
+
+.PHONY : Bishop.i
+
+# target to preprocess a source file
+Bishop.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Bishop.cpp.i
+.PHONY : Bishop.cpp.i
+
+Bishop.s: Bishop.cpp.s
+
+.PHONY : Bishop.s
+
+# target to generate assembly for a file
+Bishop.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Bishop.cpp.s
+.PHONY : Bishop.cpp.s
+
+Board.obj: Board.cpp.obj
+
+.PHONY : Board.obj
+
+# target to build an object file
+Board.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Board.cpp.obj
+.PHONY : Board.cpp.obj
+
+Board.i: Board.cpp.i
+
+.PHONY : Board.i
+
+# target to preprocess a source file
+Board.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Board.cpp.i
+.PHONY : Board.cpp.i
+
+Board.s: Board.cpp.s
+
+.PHONY : Board.s
+
+# target to generate assembly for a file
+Board.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Board.cpp.s
+.PHONY : Board.cpp.s
+
+Game.obj: Game.cpp.obj
+
+.PHONY : Game.obj
+
+# target to build an object file
+Game.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Game.cpp.obj
+.PHONY : Game.cpp.obj
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+King.obj: King.cpp.obj
+
+.PHONY : King.obj
+
+# target to build an object file
+King.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/King.cpp.obj
+.PHONY : King.cpp.obj
+
+King.i: King.cpp.i
+
+.PHONY : King.i
+
+# target to preprocess a source file
+King.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/King.cpp.i
+.PHONY : King.cpp.i
+
+King.s: King.cpp.s
+
+.PHONY : King.s
+
+# target to generate assembly for a file
+King.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/King.cpp.s
+.PHONY : King.cpp.s
+
+Knight.obj: Knight.cpp.obj
+
+.PHONY : Knight.obj
+
+# target to build an object file
+Knight.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Knight.cpp.obj
+.PHONY : Knight.cpp.obj
+
+Knight.i: Knight.cpp.i
+
+.PHONY : Knight.i
+
+# target to preprocess a source file
+Knight.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Knight.cpp.i
+.PHONY : Knight.cpp.i
+
+Knight.s: Knight.cpp.s
+
+.PHONY : Knight.s
+
+# target to generate assembly for a file
+Knight.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Knight.cpp.s
+.PHONY : Knight.cpp.s
+
+Pawn.obj: Pawn.cpp.obj
+
+.PHONY : Pawn.obj
+
+# target to build an object file
+Pawn.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Pawn.cpp.obj
+.PHONY : Pawn.cpp.obj
+
+Pawn.i: Pawn.cpp.i
+
+.PHONY : Pawn.i
+
+# target to preprocess a source file
+Pawn.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Pawn.cpp.i
+.PHONY : Pawn.cpp.i
+
+Pawn.s: Pawn.cpp.s
+
+.PHONY : Pawn.s
+
+# target to generate assembly for a file
+Pawn.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Pawn.cpp.s
+.PHONY : Pawn.cpp.s
+
+Piece.obj: Piece.cpp.obj
+
+.PHONY : Piece.obj
+
+# target to build an object file
+Piece.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Piece.cpp.obj
+.PHONY : Piece.cpp.obj
+
+Piece.i: Piece.cpp.i
+
+.PHONY : Piece.i
+
+# target to preprocess a source file
+Piece.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Piece.cpp.i
+.PHONY : Piece.cpp.i
+
+Piece.s: Piece.cpp.s
+
+.PHONY : Piece.s
+
+# target to generate assembly for a file
+Piece.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Piece.cpp.s
+.PHONY : Piece.cpp.s
+
+Player.obj: Player.cpp.obj
+
+.PHONY : Player.obj
+
+# target to build an object file
+Player.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Player.cpp.obj
+.PHONY : Player.cpp.obj
+
+Player.i: Player.cpp.i
+
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
+Queen.obj: Queen.cpp.obj
+
+.PHONY : Queen.obj
+
+# target to build an object file
+Queen.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Queen.cpp.obj
+.PHONY : Queen.cpp.obj
+
+Queen.i: Queen.cpp.i
+
+.PHONY : Queen.i
+
+# target to preprocess a source file
+Queen.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Queen.cpp.i
+.PHONY : Queen.cpp.i
+
+Queen.s: Queen.cpp.s
+
+.PHONY : Queen.s
+
+# target to generate assembly for a file
+Queen.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Queen.cpp.s
+.PHONY : Queen.cpp.s
+
+RestrictedPiece.obj: RestrictedPiece.cpp.obj
+
+.PHONY : RestrictedPiece.obj
+
+# target to build an object file
+RestrictedPiece.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/RestrictedPiece.cpp.obj
+.PHONY : RestrictedPiece.cpp.obj
+
+RestrictedPiece.i: RestrictedPiece.cpp.i
+
+.PHONY : RestrictedPiece.i
+
+# target to preprocess a source file
+RestrictedPiece.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/RestrictedPiece.cpp.i
+.PHONY : RestrictedPiece.cpp.i
+
+RestrictedPiece.s: RestrictedPiece.cpp.s
+
+.PHONY : RestrictedPiece.s
+
+# target to generate assembly for a file
+RestrictedPiece.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/RestrictedPiece.cpp.s
+.PHONY : RestrictedPiece.cpp.s
+
+Rook.obj: Rook.cpp.obj
+
+.PHONY : Rook.obj
+
+# target to build an object file
+Rook.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Rook.cpp.obj
+.PHONY : Rook.cpp.obj
+
+Rook.i: Rook.cpp.i
+
+.PHONY : Rook.i
+
+# target to preprocess a source file
+Rook.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Rook.cpp.i
+.PHONY : Rook.cpp.i
+
+Rook.s: Rook.cpp.s
+
+.PHONY : Rook.s
+
+# target to generate assembly for a file
+Rook.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Rook.cpp.s
+.PHONY : Rook.cpp.s
+
+Square.obj: Square.cpp.obj
+
+.PHONY : Square.obj
+
+# target to build an object file
+Square.cpp.obj:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Square.cpp.obj
+.PHONY : Square.cpp.obj
+
+Square.i: Square.cpp.i
+
+.PHONY : Square.i
+
+# target to preprocess a source file
+Square.cpp.i:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Square.cpp.i
+.PHONY : Square.cpp.i
+
+Square.s: Square.cpp.s
+
+.PHONY : Square.s
+
+# target to generate assembly for a file
+Square.cpp.s:
+	$(MAKE) -f CMakeFiles\Chess.dir\build.make CMakeFiles/Chess.dir/Square.cpp.s
+.PHONY : Square.cpp.s
+
 chess.obj: chess.cpp.obj
 
 .PHONY : chess.obj
@@ -158,6 +482,42 @@ help:
 	@echo ... Chess
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Bishop.obj
+	@echo ... Bishop.i
+	@echo ... Bishop.s
+	@echo ... Board.obj
+	@echo ... Board.i
+	@echo ... Board.s
+	@echo ... Game.obj
+	@echo ... Game.i
+	@echo ... Game.s
+	@echo ... King.obj
+	@echo ... King.i
+	@echo ... King.s
+	@echo ... Knight.obj
+	@echo ... Knight.i
+	@echo ... Knight.s
+	@echo ... Pawn.obj
+	@echo ... Pawn.i
+	@echo ... Pawn.s
+	@echo ... Piece.obj
+	@echo ... Piece.i
+	@echo ... Piece.s
+	@echo ... Player.obj
+	@echo ... Player.i
+	@echo ... Player.s
+	@echo ... Queen.obj
+	@echo ... Queen.i
+	@echo ... Queen.s
+	@echo ... RestrictedPiece.obj
+	@echo ... RestrictedPiece.i
+	@echo ... RestrictedPiece.s
+	@echo ... Rook.obj
+	@echo ... Rook.i
+	@echo ... Rook.s
+	@echo ... Square.obj
+	@echo ... Square.i
+	@echo ... Square.s
 	@echo ... chess.obj
 	@echo ... chess.i
 	@echo ... chess.s

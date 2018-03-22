@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 
@@ -8,63 +8,50 @@
 #define _BOARD_H
 #define DIMENSION (8)
 
+#include <map>
+#include "Square.h"
 
-class Square;
+typedef map<int, map<int, Square> > Squares;
 
 class Board {
-public:
+ public:
 
-  static Board* getInstance()
-  {
-    /* Check to see if instance has already been created.*/
-    if(!_instance)
-    {
-      /*Instance has yet to be created, therefore create new instance.*/
-      _instance = new Board();
-    }
+  static Board *getInstance();
 
-    return _instance;
-  }
-    
-    /**
-     * @param rank
-     * @param file
-     */
-    Square& getSquareAt(int rank, int file) {
-      return *_squares[rank][file];
-    }
-    
-    /**
-     * @param from
-     * @param to
-     */
-    bool isClearRank(Square& from, Square& to);
-    
-    /**
-     * @param from
-     * @param to
-     */
-    bool isClearFile(Square& from, Square& to);
-    
-    /**
-     * @param from
-     * @param to
-     */
-    bool isClearDiagonal(Square& from, Square& to);
-    
-    /**
-     * @param os
-     */
-    void display(ostream& os);
+  /**
+   * @param rank
+   * @param file
+   */
+  Square &getSquareAt(int rank, int file);
 
-private: 
-//    const int DIMENSION = 8;
-    static Board* _instance;
-    Square* _squares[DIMENSION][DIMENSION];
-    Board() = default;
+  /**
+   * @param from
+   * @param to
+   */
+  bool isClearRank(Square &from, Square &to);
+
+  /**
+   * @param from
+   * @param to
+   */
+  bool isClearFile(Square &from, Square &to);
+
+  /**
+   * @param from
+   * @param to
+   */
+  bool isClearDiagonal(Square &from, Square &to);
+
+  /**
+   * @param os
+   */
+  void display(std::ostream &os);
+
+ private:
+  static Board *_instance;
+  static Squares _squares;
+  Board() = default;
+  static void initializeBoard();
 };
-
-Board* Board::_instance = nullptr;
-//Board::Board() = default;
 
 #endif //_BOARD_H

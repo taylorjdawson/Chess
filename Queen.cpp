@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 
@@ -16,19 +16,19 @@
  * @return int
  */
 int Queen::getValue() {
-    return 0;
+  return 0;
 }
 
 /**
  * @param location
  * @return boolean
  */
-bool Queen::canMoveTo(Square& location) {
-    return false;
+bool Queen::canMoveTo(Square &location) {
+  return false;
 }
 
 Queen::Queen(const string &color, Square *location) : Piece(color,
-                                                                  location) {}
-string Queen::getPieceSymbol(){
-    return PIECE_SYMBOL;
+                                                            location) {}
+string Queen::getPieceSymbol() {
+  return PIECE_SYMBOL;
 }

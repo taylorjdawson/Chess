@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 
@@ -10,7 +10,8 @@
  * Piece implementation
  */
 
-Piece::Piece(const string &color, Square *location) : _color(color), _location(location) {}
+Piece::Piece(const string &color, Square *location)
+    : _color(color), _location(location) {}
 
 Piece::Piece() = default;
 
@@ -66,13 +67,13 @@ bool Piece::moveTo(Square &location, Player &byPlayer) {
   return false;
 }
 
-string Piece::getPieceSymbol() { return "";}
+string Piece::getPieceSymbol() { return ""; }
 
 /**
  * @param os
  */
 void Piece::display(ostream &os) {
-  os << getColor() + getPieceSymbol();
+  os << getColor() /*+ getPieceSymbol()*/;
 }
 
 ostream &operator<<(ostream &os, Piece &piece) {

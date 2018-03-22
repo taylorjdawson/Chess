@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 
@@ -16,19 +16,20 @@
  * @return int
  */
 int King::getValue() {
-    return 0;
+  return 0;
 }
 
 /**
  * @param location
  * @return boolean
  */
-bool King::canMoveTo(Square& location) {
-    return false;
+bool King::canMoveTo(Square &location) {
+  return false;
 }
 
-string King::getPieceSymbol(){
-    return PIECE_SYMBOL;
+string King::getPieceSymbol() {
+  return PIECE_SYMBOL;
 }
 
-King::King(const string &color, Square *location) : RestrictedPiece(color, location) {}
+King::King(const string &color, Square *location) : RestrictedPiece(color,
+                                                                    location) {}
