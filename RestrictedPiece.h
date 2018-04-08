@@ -25,7 +25,7 @@ class RestrictedPiece : public Piece {
   bool hasMoved();
  private:
 
-  bool moved = false;
+  bool _moved = false;
 };
 
 #endif //_RESTRICTEDPIECE_H

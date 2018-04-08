@@ -19,8 +19,6 @@ iostream
 -
 Board.h
 C:/Users/taylo/CLionProjects/Chess/Board.h
-typeinfo
--
 
 C:/Users/taylo/CLionProjects/Chess/Board.h
 map
@@ -53,6 +51,8 @@ Bishop.h
 C:/Users/taylo/CLionProjects/Chess/Bishop.h
 Knight.h
 C:/Users/taylo/CLionProjects/Chess/Knight.h
+King.h
+C:/Users/taylo/CLionProjects/Chess/King.h
 
 C:/Users/taylo/CLionProjects/Chess/King.cpp
 King.h
@@ -137,12 +137,6 @@ Piece.h
 C:/Users/taylo/CLionProjects/Chess/Piece.h
 
 C:/Users/taylo/CLionProjects/Chess/chess.cpp
-iostream
--
-Board.h
-C:/Users/taylo/CLionProjects/Chess/Board.h
 Game.h
 C:/Users/taylo/CLionProjects/Chess/Game.h
-King.h
-C:/Users/taylo/CLionProjects/Chess/King.h
 

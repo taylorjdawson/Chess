@@ -25,7 +25,7 @@ bool RestrictedPiece::moveTo(Square &location, Player &byPlayer) {
  * @return boolean
  */
 bool RestrictedPiece::hasMoved() {
-  return false;
+  return _moved;
 }
 
 RestrictedPiece::RestrictedPiece(const string &color, Square *location)

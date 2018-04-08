@@ -15,6 +15,7 @@ CMakeFiles/Chess.dir/Game.cpp.obj: ../Bishop.h
 CMakeFiles/Chess.dir/Game.cpp.obj: ../Board.h
 CMakeFiles/Chess.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/Chess.dir/Game.cpp.obj: ../Game.h
+CMakeFiles/Chess.dir/Game.cpp.obj: ../King.h
 CMakeFiles/Chess.dir/Game.cpp.obj: ../Knight.h
 CMakeFiles/Chess.dir/Game.cpp.obj: ../Pawn.h
 CMakeFiles/Chess.dir/Game.cpp.obj: ../Piece.h

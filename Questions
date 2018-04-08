@@ -1,0 +1,13 @@
+- Game.cpp:35:0 & vs * why have getNextPlayer return reference as opposed to a string?
+- Overloading print operator not working?
+- Why do I need to cast? Game.cpp:99, 102
+- References versus pointer null pointers initialisation
+
+
+Notes
+
+Piece color is the number which to add to the unicode character to change its
+color or to have i remain the same color.
+Get symbol returns the symbol which to add the colour to
+
+

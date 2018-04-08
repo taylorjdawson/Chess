@@ -23,36 +23,35 @@ class Game {
 
  public:
 
+  /**
+   * Initializes the boards
+   */
   static void initialize();
 
-  Player &getNextPlayer();
+  /**
+   * Returns the next player
+   * @return the next player
+   */
+  static Player *getNextPlayer();
 
   /**
-   * @param player
+   * Gets the opponent of the specifed player
+   * @param player the player whose opponent is sought
+   * @return the opponent of the specified player
    */
   Player &getOpponentOf(Player &player);
+  static Player* _player;
 
  private:
   static bool gameInitialized;
   static const string BLACK;
-  Player _player;
-  Player _nextPlayer;
-  static Board *_board;
-  static Piece *_whitePieces[];
-  static Piece *_blackPieces[];
-static const string BLACK_ROOK   ;
-static const string BLACK_KNIGHT ;
-static const string BLACK_BISHOP ;
-static const string BLACK_QUEEN  ;
-static const string BLACK_KING   ;
-static const string BLACK_PAWN   ;
-static const string WHITE_ROOK   ;
-static const string WHITE_KNIGHT ;
-static const string WHITE_BISHOP ;
-static const string WHITE_QUEEN  ;
-static const string WHITE_KING   ;
-static const string WHITE_PAWN   ;
+  static Player* _nextPlayer;
 
+  static Board *_board;
+  static set<Piece *> _whitePieces;
+  static set<Piece *> _blackPieces;
 };
 
 #endif //_GAME_H
+static const int NUMBER_OF_CHESS_ROWS = 2;
+static const int NUMBER_OF_CHESS_COLS = 8;

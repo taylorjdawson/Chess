@@ -99,7 +99,7 @@ void Board::display(ostream &os) {
     }
   }
   os << "\n" << board_footer << endl;
-  os << board_header_letters;
+  os << board_header_letters << endl;
 }
 
 void Board::initializeBoard() {

@@ -11,7 +11,7 @@
 #include <map>
 #include "Square.h"
 
-typedef map<int, map<int, Square> > Squares;
+typedef map<int, map<int, Square>> Squares;
 
 class Board {
  public:

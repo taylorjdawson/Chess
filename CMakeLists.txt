@@ -16,3 +16,4 @@ add_executable(Chess chess.cpp
         Queen.cpp
         Knight.cpp
         Bishop.cpp)
+

@@ -27,8 +27,8 @@ class Piece {
   string getColor();
 
   /**
-   *
-   * @return
+   * Returns the Square object of where the piece currently resides
+   * @return the Square object of where the piece currently resides
    */
   Square *getLocation();
 

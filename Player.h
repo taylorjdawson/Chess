@@ -15,22 +15,40 @@ class Piece;
 class King;
 using namespace std;
 
-class Player { // g++ -std=c++11 -Wall -g -Og
+class Player {
  public:
 
   /**
-   * @param name
-   * @param king
-   * @param pieces
+   * Contructs a player object
+   * @param _name
+   * @param _king
+   * @param _pieces
    */
   Player(const string &_name, King &_king, set<Piece *> &_pieces);
 
+  /**
+   *
+   * @return
+   */
   string getName();
 
+  /**
+   *
+   * @return
+   */
   King &getKing();
 
+  /**
+   *
+   * @return
+   */
   set<Piece *> &getPieces();
 
+  /**
+   * Prompts the player to make a move and returns true if the move was
+   * successful.
+   * @return true if the move was successful.
+   */
   bool makeMove();
 
   /**
@@ -39,6 +57,9 @@ class Player { // g++ -std=c++11 -Wall -g -Og
   void capture(Piece &piece);
 
   int calculateScore();
+  void display(ostream &os);
+  friend ostream& operator<<(ostream& os, Piece& piece);
+
  private:
   string _name;
   King &_king;

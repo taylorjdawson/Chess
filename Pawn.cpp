@@ -24,6 +24,15 @@ int Pawn::getValue() {
  * @return boolean
  */
 bool Pawn::canMoveTo(Square &location) {
+
+  if(!hasMoved())
+  {
+
+  }
+  else {
+
+  }
+
   return false;
 }
 

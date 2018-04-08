@@ -11,10 +11,23 @@
 
 class Square;
 
+/**
+ * A Pawn object
+ */
 class Pawn : public RestrictedPiece {
  public:
+
+  /**
+   *
+   * @param color
+   * @param location
+   */
   Pawn(const string &color, Square *location);
 
+  /**
+   *
+   * @return
+   */
   int getValue() override;
 
   /**
@@ -22,6 +35,10 @@ class Pawn : public RestrictedPiece {
    */
   bool canMoveTo(Square &location) override;
 
+  /**
+   *
+   * @return
+   */
   string getPieceSymbol() override;
 };
 

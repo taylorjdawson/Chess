@@ -15,63 +15,36 @@ Piece::Piece(const string &color, Square *location)
 
 Piece::Piece() = default;
 
-/**
- * @return int
- */
 int Piece::getValue() {
   return 0;
 }
 
-/**
- * @return string
- */
 string Piece::getColor() {
   return _color;
 }
 
-/**
- * @return Square*
- */
 Square *Piece::getLocation() {
   return _location;
 }
 
-/**
- * @param location
- */
 void Piece::setLocation(Square *location) {
   _location = location;
 }
 
-/**
- * @return bool
- */
 bool Piece::isOnSquare() {
-  return false;
+  return _location != nullptr;
 }
 
-/**
- * @param location
- * @return bool
- */
 bool Piece::canMoveTo(Square &location) {
   return false;
 }
 
-/**
- * @param location
- * @param byPlayer
- * @return bool
- */
 bool Piece::moveTo(Square &location, Player &byPlayer) {
   return false;
 }
 
 string Piece::getPieceSymbol() { return ""; }
 
-/**
- * @param os
- */
 void Piece::display(ostream &os) {
   os << getColor() /*+ getPieceSymbol()*/;
 }
