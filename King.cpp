@@ -28,7 +28,7 @@ bool King::canMoveTo(Square &location) {
 }
 
 string King::getPieceSymbol() {
-  return PIECE_SYMBOL;
+  return this->getColor() == "B" ? "♚" : "♔";
 }
 
 King::King(const string &color, Square *location) : RestrictedPiece(color,

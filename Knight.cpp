@@ -29,6 +29,6 @@ bool Knight::canMoveTo(Square& location) {
 }
 
 string Knight::getPieceSymbol(){
-    return PIECE_SYMBOL;
+    return this->getColor() == "B" ? "♞" : "♘";
 }
 

@@ -41,10 +41,10 @@ class Game {
    */
   Player &getOpponentOf(Player &player);
   static Player* _player;
+  enum Color {Black, White};
 
  private:
   static bool gameInitialized;
-  static const string BLACK;
   static Player* _nextPlayer;
 
   static Board *_board;

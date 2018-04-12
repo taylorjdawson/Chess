@@ -17,9 +17,6 @@ using namespace std;
 Board *Board::_instance = nullptr;
 Squares Board::_squares;
 
-/**
- * @return Board&
- */
 Board *Board::getInstance() {
 
   /* Check to see if instance has already been created.*/
@@ -34,50 +31,50 @@ Board *Board::getInstance() {
 
   return _instance;
 }
-
-/**
- * @param rank
- * @param file
- * @return Square&
- */
+//ASK: Reference or pointer
 Square &Board::getSquareAt(int rank, int file) {
   return _squares[rank][file];
 }
 
-/**
- * @param from
- * @param to
- * @return bool
- */
+
 bool Board::isClearRank(Square &from, Square &to) {
-  return false;
+  bool isClearRank = true;
+
+  /* CONSIDER: Edge case where from and to are same square.
+   * CONSIDER: Edge case where the are not within the same rank.
+   * Should it be a precondition for using this method? or should it be
+   * checked for within the method? For now the will both be preconditions */
+
+  /* Determine the direction i.e. +-1 when iterating through squares */
+  int dir = ( (to.getRank() - from.getRank()) > 0) -
+      ( (to.getRank() - from.getRank()) < 0);
+
+  int rank = from.getRank();
+
+  /* When the absolute value between the current rank and the toRank == 0
+   * then we have checked all squares up to the destination square.*/
+  while(isClearRank && abs(rank - to.getRank()))
+  {
+    rank += dir;
+    isClearRank = !_squares[rank][from.getFile()].isOccupied();
+  }
+  return isClearRank;
 }
 
-/**
- * @param from
- * @param to
- * @return bool
- */
+
 bool Board::isClearFile(Square &from, Square &to) {
   return false;
 }
 
-/**
- * @param from
- * @param to
- * @return bool
- */
+
 bool Board::isClearDiagonal(Square &from, Square &to) {
   return false;
 }
 
-/**
- * @param os
- */
 void Board::display(ostream &os) {
-  const string board_header_letters = "   a   b   c   d   e   f   g   h";
+  const string board_header_letters = "    a   b   c   d   e   f   g   h";
   const string board_header = "  ┌───┬───┬───┬───┬───┬───┬───┬───┐";
-  const string row_divider = "  ├───┼───┼───┼───┼───┼───┼───┼───┤";
+  const string row_divider =  "  ├───┼───┼───┼───┼───┼───┼───┼───┤";
   const string board_footer = "  └───┴───┴───┴───┴───┴───┴───┴───┘";
   int file = 0;
   os << board_header_letters << '\n' << board_header << endl;
@@ -98,13 +95,16 @@ void Board::display(ostream &os) {
       os << "\n" <<row_divider << endl;
     }
   }
+
+  /*Print the board footer*/
   os << "\n" << board_footer << endl;
   os << board_header_letters << endl;
 }
 
 void Board::initializeBoard() {
-  for (int rank = 0; rank < 2; rank++) {
+  for (int rank = 0; rank < 8; rank++) {
     for (int file = 0; file < 8; file++) {
+      //ASK: Should be using new?
       _squares[rank][file] = Square(rank, file);
     }
   }

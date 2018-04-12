@@ -71,8 +71,12 @@ Piece.h
 C:/Users/taylo/CLionProjects/Chess/Piece.h
 
 C:/Users/taylo/CLionProjects/Chess/Pawn.cpp
+iostream
+-
 Pawn.h
 C:/Users/taylo/CLionProjects/Chess/Pawn.h
+Board.h
+C:/Users/taylo/CLionProjects/Chess/Board.h
 
 C:/Users/taylo/CLionProjects/Chess/Pawn.h
 RestrictedPiece.h
@@ -91,6 +95,10 @@ Square.h
 C:/Users/taylo/CLionProjects/Chess/Square.h
 
 C:/Users/taylo/CLionProjects/Chess/Player.cpp
+iostream
+-
+regex
+-
 Player.h
 C:/Users/taylo/CLionProjects/Chess/Player.h
 
@@ -101,6 +109,8 @@ vector
 -
 set
 -
+Board.h
+C:/Users/taylo/CLionProjects/Chess/Board.h
 
 C:/Users/taylo/CLionProjects/Chess/Queen.cpp
 Queen.h
@@ -137,6 +147,10 @@ Piece.h
 C:/Users/taylo/CLionProjects/Chess/Piece.h
 
 C:/Users/taylo/CLionProjects/Chess/chess.cpp
+limits
+-
+regex
+-
 Game.h
 C:/Users/taylo/CLionProjects/Chess/Game.h
 

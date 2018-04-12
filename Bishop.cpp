@@ -30,5 +30,5 @@ bool Bishop::canMoveTo(Square &location) {
 }
 
 string Bishop::getPieceSymbol() {
-  return PIECE_SYMBOL;
+  return this->getColor() == "B" ? "♝" : "♗";
 }

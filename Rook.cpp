@@ -28,7 +28,7 @@ bool Rook::canMoveTo(Square &location) {
 }
 
 string Rook::getPieceSymbol() {
-  return PIECE_SYMBOL;
+  return this->getColor() == "B" ? "♜" : "♖";
 }
 Rook::Rook(const string &color, Square *location) : RestrictedPiece(color,
                                                                     location) {}

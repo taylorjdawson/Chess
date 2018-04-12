@@ -37,6 +37,7 @@ CMakeFiles/Chess.dir/Knight.cpp.obj
  C:/Users/taylo/CLionProjects/Chess/Piece.h
  C:/Users/taylo/CLionProjects/Chess/Square.h
 CMakeFiles/Chess.dir/Pawn.cpp.obj
+ C:/Users/taylo/CLionProjects/Chess/Board.h
  C:/Users/taylo/CLionProjects/Chess/Pawn.cpp
  C:/Users/taylo/CLionProjects/Chess/Pawn.h
  C:/Users/taylo/CLionProjects/Chess/Piece.h
@@ -47,8 +48,11 @@ CMakeFiles/Chess.dir/Piece.cpp.obj
  C:/Users/taylo/CLionProjects/Chess/Piece.h
  C:/Users/taylo/CLionProjects/Chess/Square.h
 CMakeFiles/Chess.dir/Player.cpp.obj
+ C:/Users/taylo/CLionProjects/Chess/Board.h
+ C:/Users/taylo/CLionProjects/Chess/Piece.h
  C:/Users/taylo/CLionProjects/Chess/Player.cpp
  C:/Users/taylo/CLionProjects/Chess/Player.h
+ C:/Users/taylo/CLionProjects/Chess/Square.h
 CMakeFiles/Chess.dir/Queen.cpp.obj
  C:/Users/taylo/CLionProjects/Chess/Piece.h
  C:/Users/taylo/CLionProjects/Chess/Queen.cpp

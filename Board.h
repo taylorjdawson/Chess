@@ -25,6 +25,8 @@ class Board {
   Square &getSquareAt(int rank, int file);
 
   /**
+   *
+   * Returns false if the from and to square are equal
    * @param from
    * @param to
    */

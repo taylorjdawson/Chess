@@ -30,5 +30,5 @@ bool Queen::canMoveTo(Square &location) {
 Queen::Queen(const string &color, Square *location) : Piece(color,
                                                             location) {}
 string Queen::getPieceSymbol() {
-  return PIECE_SYMBOL;
+  return this->getColor() == "B"  ? "♛" : "♕";
 }

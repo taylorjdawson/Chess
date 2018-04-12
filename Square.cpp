@@ -16,7 +16,8 @@
  * @param _file
  * @param _occupant
  */
-Square::Square(int _rank, int _file) : _rank(_rank), _file(_file) {}
+Square::Square(int _rank, int _file) : _rank(_rank), _file(_file) {_occupant =
+                                                                       nullptr;}
 Square::Square() = default;
 
 /**

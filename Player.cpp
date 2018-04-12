@@ -7,7 +7,6 @@
 #include <iostream>
 #include <regex>
 #include "Player.h"
-#include "Board.h"
 
 using namespace std;
 
@@ -45,6 +44,9 @@ bool Player::makeMove() {
   /*CONSIDER bool for computer or human user
    * if computer then skip prompt and generate a move.
    * */
+
+  /*CONSIDER: Out sourceing the getinput function for modifiability
+   * that way we can get input from sayyyy a mouse instead? */
   string move;
   /* TODO: Explaing this "cleverness" */
   regex algNotation("(?=[A-Ha-h][1-8]\\s[A-Ha-h][1-8]).{5}");
@@ -58,41 +60,52 @@ bool Player::makeMove() {
 
   /* Validate the string that it is the correct format by
   checking the input against the regex */
-  validMove = regex_match(move, algNotation);
-
-  if (validMove) {
+  if (regex_match(move, algNotation)) {
 
     /* Extract the algebraic notation to matrix*/
-    string fromSquare = move.substr(0, 2);
-    string toSquare = move.substr(3, 4);
+    string from = move.substr(0, 2);
+    string to = move.substr(3, 4);
 
     /* Check that they are not the same. We can't move a piece to the location
      * that it currently is in. */
-    if (fromSquare == toSquare) {
+    if (from == to) {
       cout << "Invalid move: " << move << endl;
-      validMove = false;
     } else {
 
       //TODO: Clean up variables may be redundant
-      /* Convert the algebraic notation to matrix indices*/
-      int fromFile = fromSquare[0] - 97;//TODO: Explain this
-      int fromRank = 56 - fromSquare[1];//TODO: Explain this
-      int toFile = toSquare[0] - 97;
-      int toRank = 56 - toSquare[1];
 
-      Board* board = Board::getInstance();
-      Square square = board->getSquareAt(fromRank, fromFile);
+
+      Board *board = Board::getInstance();
+
+      /*TODO: Change to piece
+       * it might not be necessary to have a reference to a square*/
+      //TODO: Create a to and from square object
+      /* Convert the algebraic notation to matrix indices */
+      /*                                   TODO: Explain this         */
+      Square& fromSquare = board->getSquareAt(56 - from[1], from[0] - 97);
+      Square& toSquare = board->getSquareAt(56 - to[1], to[0] - 97);
 
       /* First check to see if the pawn is owned by this player */
+      if (_pieces.find(fromSquare.getOccupant()) != _pieces.end()) {
 
-      /* Then check that the piece can legally move to that desired location */
+        /* Then check that the piece can legally move to that desired location*/
+        if (fromSquare.getOccupant()->canMoveTo(toSquare)) {
 
-      /* Check that the square where the piece wishes to move is not occupied */
-
-      cout << square.getOccupant()->getColor()/*->canMoveTo(board->getSquareAt(fromRank, fromFile))*/ << endl;
+          fromSquare.getOccupant()->setLocation(&toSquare);
+          toSquare.setOccupant(fromSquare.getOccupant());
+            // ASK: Using square (initialized above doesn't work..why?)
+          fromSquare.setOccupant(nullptr);
+          validMove = true;
+        } else {
+          cout << "Can't Move!" << endl;
+        }
+      } else {
+        cout << "Invalid move: " << move << endl;
+        cout << "That's not your piece" << endl;
+      }
     }
 
-    /*cout << "From: " << fromSquare << " To: " << toSquare << endl;*/
+    /*cout << "From: " << from << " To: " << to << endl;*/
 
   } else {
     cout << "Invalid move: " << move << endl;

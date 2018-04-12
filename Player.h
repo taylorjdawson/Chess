@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <set>
+#include "Board.h"
 
 class Piece;
 class King;

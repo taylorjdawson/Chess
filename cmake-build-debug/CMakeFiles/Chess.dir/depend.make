@@ -36,6 +36,7 @@ CMakeFiles/Chess.dir/Knight.cpp.obj: ../Knight.h
 CMakeFiles/Chess.dir/Knight.cpp.obj: ../Piece.h
 CMakeFiles/Chess.dir/Knight.cpp.obj: ../Square.h
 
+CMakeFiles/Chess.dir/Pawn.cpp.obj: ../Board.h
 CMakeFiles/Chess.dir/Pawn.cpp.obj: ../Pawn.cpp
 CMakeFiles/Chess.dir/Pawn.cpp.obj: ../Pawn.h
 CMakeFiles/Chess.dir/Pawn.cpp.obj: ../Piece.h
@@ -46,8 +47,11 @@ CMakeFiles/Chess.dir/Piece.cpp.obj: ../Piece.cpp
 CMakeFiles/Chess.dir/Piece.cpp.obj: ../Piece.h
 CMakeFiles/Chess.dir/Piece.cpp.obj: ../Square.h
 
+CMakeFiles/Chess.dir/Player.cpp.obj: ../Board.h
+CMakeFiles/Chess.dir/Player.cpp.obj: ../Piece.h
 CMakeFiles/Chess.dir/Player.cpp.obj: ../Player.cpp
 CMakeFiles/Chess.dir/Player.cpp.obj: ../Player.h
+CMakeFiles/Chess.dir/Player.cpp.obj: ../Square.h
 
 CMakeFiles/Chess.dir/Queen.cpp.obj: ../Piece.h
 CMakeFiles/Chess.dir/Queen.cpp.obj: ../Queen.cpp
