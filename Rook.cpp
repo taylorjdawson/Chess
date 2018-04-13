@@ -2,33 +2,24 @@
  * Project Chess
  * @author Taylor J. Dawson
  */
-
-
 #include "Rook.h"
-#define PIECE_SYMBOL ("R")
+#define ROOK_BLACK ("♜")
+#define ROOK_WHITE ("♖")
 
 /**
  * Rook implementation
  */
 
-
-/**
- * @return int
- */
 int Rook::getValue() {
   return 0;
 }
 
-/**
- * @param location
- * @return boolean
- */
 bool Rook::canMoveTo(Square &location) {
   return false;
 }
 
 string Rook::getPieceSymbol() {
-  return this->getColor() == "B" ? "♜" : "♖";
+  return this->getColor() == Color::Black ? ROOK_BLACK : ROOK_WHITE;
 }
-Rook::Rook(const string &color, Square *location) : RestrictedPiece(color,
-                                                                    location) {}
+
+Rook::Rook(Color color, Square *location) : RestrictedPiece(color, location) {}

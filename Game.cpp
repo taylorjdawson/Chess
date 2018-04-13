@@ -67,36 +67,36 @@ void Game::initialize() {
         if (piecePosition == 0 || piecePosition == 7) {
 
           /*Create a Black and White Rook and add them to the set and board*/
-          blackPiece = new Rook(BLACK_ROOK/*Game::Color::Black*/, &squareBlack);
-          whitePiece = new Rook(WHITE_ROOK/*Game::Color::White*/, &squareWhite);
+          blackPiece = new Rook(Black, &squareBlack);
+          whitePiece = new Rook(White, &squareWhite);
 
         } else if (piecePosition == 1 || piecePosition == 6) {
 
           /*Create a Black and White Knight and add them to the set and board*/
-          blackPiece = new Knight(BLACK_KNIGHT/*Game::Color::Black*/, &squareBlack);
-          whitePiece = new Knight(WHITE_KNIGHT/*Game::Color::White*/, &squareWhite);
+          blackPiece = new Knight(Black, &squareBlack);
+          whitePiece = new Knight(White, &squareWhite);
 
         } else if (piecePosition == 2 || piecePosition == 5) {
 
           /*Create a Black and White Bishop and add them to the set and board*/
-          blackPiece = new Bishop(BLACK_BISHOP/*Game::Color::Black*/, &squareBlack);
-          whitePiece = new Bishop(WHITE_BISHOP/*Game::Color::White*/, &squareWhite);
+          blackPiece = new Bishop(Black, &squareBlack);
+          whitePiece = new Bishop(White, &squareWhite);
 
         } else if (piecePosition == 3) {
           // Place Queen
-          blackPiece = new Queen(BLACK_QUEEN/*Game::Color::Black*/, &squareBlack);
-          whitePiece = new Queen(WHITE_QUEEN/*Game::Color::White*/, &squareWhite);
+          blackPiece = new Queen(Black, &squareBlack);
+          whitePiece = new Queen(White, &squareWhite);
 
 
         } else if (piecePosition == 4) {
           // Place King
-          blackPiece = blackKing = new King(BLACK_KING/*Game::Color::Black*/, &squareBlack);
-          whitePiece = whiteKing = new King(WHITE_KING/*Game::Color::White*/, &squareWhite);
+          blackPiece = blackKing = new King(Black, &squareBlack);
+          whitePiece = whiteKing = new King(White, &squareWhite);
 
         } else { /* It must be a Pawn */
           // Place Pawn
-          blackPiece = new Pawn(Black/*Game::Color::Black*/, &squareBlack);
-          whitePiece = new Pawn(White/*Game::Color::White*/, &squareWhite);
+          blackPiece = new Pawn(Black, &squareBlack);
+          whitePiece = new Pawn(White, &squareWhite);
 
         }
         squareBlack.setOccupant(*(Game::_blackPieces.insert(blackPiece).first));
@@ -119,9 +119,6 @@ void Game::initialize() {
   ROW ***************/
 }
 
-/**
- * @return Player&
- */
 Player *Game::getNextPlayer() {
   Player *nextPlayer = Game::_nextPlayer;
   Game::_nextPlayer = Game::_player;
@@ -129,12 +126,6 @@ Player *Game::getNextPlayer() {
   return nextPlayer;
 }
 
-/**
- * @param player
- * @return Player&
- */
 Player &Game::getOpponentOf(Player &player) {
   return *Game::_player;
 }
-
-

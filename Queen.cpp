@@ -27,8 +27,8 @@ bool Queen::canMoveTo(Square &location) {
   return false;
 }
 
-Queen::Queen(const string &color, Square *location) : Piece(color,
-                                                            location) {}
 string Queen::getPieceSymbol() {
-  return this->getColor() == "B"  ? "♛" : "♕";
+  return this->getColor() == Color::Black  ? "♛" : "♕";
 }
+
+Queen::Queen(Color color, Square *location) : Piece(color, location) {}

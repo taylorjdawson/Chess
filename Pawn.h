@@ -22,8 +22,6 @@ class Pawn : public RestrictedPiece {
    * @param color
    * @param location
    */
-  Pawn(const string &color, Square *location);
-
   Pawn(Color color, Square *location);
   /**
      *

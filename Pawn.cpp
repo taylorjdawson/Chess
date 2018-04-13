@@ -14,18 +14,10 @@
  * Pawn implementation
  */
 
-
-/**
- * @return int
- */
 int Pawn::getValue() {
   return 0;
 }
 
-/**
- * @param location
- * @return boolean
- */
 bool Pawn::canMoveTo(Square &location) {
   //ASK: to use 'this' or not yo use 'this' that is the question...
 
@@ -36,7 +28,8 @@ bool Pawn::canMoveTo(Square &location) {
   /*If pawn is Black it can only move rank - 1*/
   /*If pawn is White it can only move rank + 1*/
   rankDir =
-      (this->getColor() == "B") ? 1 : -1; //TODO: Change color to enumeration
+      (this->getColor() == Color::Black) ? 1
+                                         : -1; //TODO: Change color to enumeration
 
   int pieceRank = getLocation()->getRank();
   int pieceFile = getLocation()->getFile();
@@ -103,13 +96,11 @@ int Pawn::getLocationIndex(int pawnRank, int pawnFile, int rank, int file) {
 
 string Pawn::getPieceSymbol() {
   //TODO: Change to enum later
-  return this->getColor() == "B" ? PAWN_BLACK : PAWN_WHITE;
+  return this->getColor() == Color::Black ? PAWN_BLACK : PAWN_WHITE;
 }
-Pawn::Pawn(const string &color, Square *location) : RestrictedPiece(color,
-                                                                    location) {}
 
 Pawn::Pawn(Color color, Square *location) : RestrictedPiece(color,
-                                                                    location) {}
+                                                            location) {}
 
 
 

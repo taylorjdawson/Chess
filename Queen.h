@@ -13,7 +13,7 @@
 class Queen: public Piece {
 public:
 
-  Queen(const string &color, Square *location);
+  Queen(Color color, Square *location);
   int getValue() override;
     
     /**

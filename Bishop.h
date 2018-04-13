@@ -12,7 +12,17 @@
 class Bishop : public Piece {
  public:
 
-  Bishop(const string &color, Square *location);
+  /**
+   *
+   * @param color
+   * @param location
+   */
+  Bishop(Color color, Square *location);
+
+  /**
+   *
+   * @return
+   */
   int getValue() override;
 
   /**
@@ -20,6 +30,10 @@ class Bishop : public Piece {
    */
   bool canMoveTo(Square &location) override;
 
+  /**
+   *
+   * @return
+   */
   string getPieceSymbol() override;
 
  private:

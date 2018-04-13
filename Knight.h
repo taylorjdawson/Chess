@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 
@@ -9,18 +9,31 @@
 
 #include "Piece.h"
 
+class Knight : public Piece {
+ public:
 
-class Knight: public Piece {
-public:
+  /**
+   *
+   * @param color
+   * @param location
+   */
+  Knight(Color color, Square *location);
 
-  Knight(const string &color, Square *location);
-
+  /**
+   *
+   * @return
+   */
   int getValue() override;
-    
-    /**
-     * @param location
-     */
-    bool canMoveTo(Square& location) override;
+
+  /**
+   * @param location
+   */
+  bool canMoveTo(Square &location) override;
+
+  /**
+   *
+   * @return
+   */
   string getPieceSymbol() override;
 };
 

@@ -12,8 +12,7 @@
 
 class Rook: public RestrictedPiece {
 public:
-  Rook(const string &color, Square *location);
-
+  Rook(Color color, Square *location);
   int getValue() override;
     
     /**

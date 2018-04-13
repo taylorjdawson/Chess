@@ -19,16 +19,16 @@ int main() {
 //  Board::getInstance()->displayColored(cout);
 
   Game::initialize();
-//
-//  Player* player = Game::getNextPlayer();
-//  bool done = true;
-//
-//  while(done)
-//  {
-//    while(!player->makeMove()){}
-//    Board::getInstance()->display(cout);
-//    player = Game::getNextPlayer();
-//  }
+
+  Player* player = Game::getNextPlayer();
+  bool done = true;
+
+  while(done)
+  {
+    while(!player->makeMove()){}
+    Board::getInstance()->display(cout);
+    player = Game::getNextPlayer();
+  }
 
 /*  std::set<int> myset;
   cout << *(myset.insert(10).first) << endl;

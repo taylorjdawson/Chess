@@ -14,15 +14,28 @@ class Square;
 class King : public RestrictedPiece {
  public:
 
-  King(const string &color, Square *location);
-
+  /**
+   *
+   * @param color
+   * @param location
+   */
   King(Color color, Square *location);
+
+  /**
+   *
+   * @return
+   */
   int getValue() override;
 
   /**
    * @param location
    */
   bool canMoveTo(Square &location) override;
+
+  /**
+   *
+   * @return
+   */
   string getPieceSymbol() override;
 };
 

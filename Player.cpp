@@ -16,30 +16,18 @@ using namespace std;
 Player::Player(const string &_name, King &_king, set<Piece *> &_pieces) : _name(
     _name), _king(_king), _pieces(_pieces) {}
 
-/**
- * @return string
- */
 string Player::getName() {
   return _name;
 }
 
-/**
- * @return King&
- */
 King &Player::getKing() {
   return _king;
 }
 
-/**
- * @return set<Piece*>&
- */
 set<Piece *> &Player::getPieces() {
   return _pieces;
 }
 
-/**
- * @return boolean
- */
 bool Player::makeMove() {
   /*CONSIDER bool for computer or human user
    * if computer then skip prompt and generate a move.
@@ -48,7 +36,7 @@ bool Player::makeMove() {
   /*CONSIDER: Out sourceing the getinput function for modifiability
    * that way we can get input from sayyyy a mouse instead? */
   string move;
-  /* TODO: Explaing this "cleverness" */
+  /* TODO: Explain this "cleverness" */
   regex algNotation("(?=[A-Ha-h][1-8]\\s[A-Ha-h][1-8]).{5}");
   bool validMove = false;
 
@@ -82,8 +70,8 @@ bool Player::makeMove() {
       //TODO: Create a to and from square object
       /* Convert the algebraic notation to matrix indices */
       /*                                   TODO: Explain this         */
-      Square& fromSquare = board->getSquareAt(56 - from[1], from[0] - 97);
-      Square& toSquare = board->getSquareAt(56 - to[1], to[0] - 97);
+      Square &fromSquare = board->getSquareAt(56 - from[1], from[0] - 97);
+      Square &toSquare = board->getSquareAt(56 - to[1], to[0] - 97);
 
       /* First check to see if the pawn is owned by this player */
       if (_pieces.find(fromSquare.getOccupant()) != _pieces.end()) {
@@ -93,7 +81,7 @@ bool Player::makeMove() {
 
           fromSquare.getOccupant()->setLocation(&toSquare);
           toSquare.setOccupant(fromSquare.getOccupant());
-            // ASK: Using square (initialized above doesn't work..why?)
+          // ASK: Using square (initialized above doesn't work..why?)
           fromSquare.setOccupant(nullptr);
           validMove = true;
         } else {
@@ -116,22 +104,18 @@ bool Player::makeMove() {
   return validMove;
 }
 
-/**
- * @param piece
- */
 void Player::capture(Piece &piece) {
   _capturedPieces.insert(_capturedPieces.begin(), &piece);
 }
 
-/**
- * @return int
- */
 int Player::calculateScore() {
   return 0;
 }
+
 void Player::display(ostream &os) {
-  os << _name; /*+ getPieceSymbol()*/;
+  os << _name;
 }
+
 ostream &operator<<(ostream &os, Player &player) {
   player.display(os);
   return os;

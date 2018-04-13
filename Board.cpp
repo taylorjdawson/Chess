@@ -36,7 +36,6 @@ Square &Board::getSquareAt(int rank, int file) {
   return _squares[rank][file];
 }
 
-
 bool Board::isClearRank(Square &from, Square &to) {
   bool isClearRank = true;
 
@@ -46,26 +45,23 @@ bool Board::isClearRank(Square &from, Square &to) {
    * checked for within the method? For now the will both be preconditions */
 
   /* Determine the direction i.e. +-1 when iterating through squares */
-  int dir = ( (to.getRank() - from.getRank()) > 0) -
-      ( (to.getRank() - from.getRank()) < 0);
+  int dir = ((to.getRank() - from.getRank()) > 0) -
+      ((to.getRank() - from.getRank()) < 0);
 
   int rank = from.getRank();
 
   /* When the absolute value between the current rank and the toRank == 0
    * then we have checked all squares up to the destination square.*/
-  while(isClearRank && abs(rank - to.getRank()))
-  {
+  while (isClearRank && abs(rank - to.getRank())) {
     rank += dir;
     isClearRank = !_squares[rank][from.getFile()].isOccupied();
   }
   return isClearRank;
 }
 
-
 bool Board::isClearFile(Square &from, Square &to) {
   return false;
 }
-
 
 bool Board::isClearDiagonal(Square &from, Square &to) {
   return false;
@@ -92,7 +88,7 @@ void Board::display(ostream &os) {
     }
     os << "│ " << 8 - rank;
     if (rank != 7) {
-      os << "\n" <<row_divider << endl;
+      os << "\n" << row_divider << endl;
     }
   }
 
@@ -104,16 +100,15 @@ void Board::display(ostream &os) {
 void Board::initializeBoard() {
   for (int rank = 0; rank < 8; rank++) {
     for (int file = 0; file < 8; file++) {
-      //ASK: Should be using new?
       _squares[rank][file] = Square(rank, file);
     }
   }
 }
+
 void Board::displayColored(std::ostream &os) {
   for (int rank = 0; rank < 8; rank++) {
     for (int file = 0; file < 8; file++) {
-      if((rank + file) % 2 == 0)
-      {
+      if ((rank + file) % 2 == 0) {
         os << "\033[47m  ";
       } else {
         os << "\033[40m  ";
