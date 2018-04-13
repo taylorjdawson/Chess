@@ -18,6 +18,7 @@
 #include "Bishop.h"
 #include "Knight.h"
 #include "King.h"
+#include "Color.h"
 
 class Game {
 
@@ -41,7 +42,7 @@ class Game {
    */
   Player &getOpponentOf(Player &player);
   static Player* _player;
-  enum Color {Black, White};
+
 
  private:
   static bool gameInitialized;

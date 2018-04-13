@@ -48,7 +48,7 @@ class Board {
    * @param os
    */
   void display(std::ostream &os);
-
+  void displayColored(std::ostream &os);
  private:
   static Board *_instance;
   static Squares _squares;

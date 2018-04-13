@@ -1,6 +1,6 @@
 /**
  * Project Chess
- * @author Brian R. Snider
+ * @author Taylor J. Dawson
  */
 
 
@@ -10,16 +10,21 @@
 #include <ostream>
 #include <string>
 #include "Square.h"
+#include "Color.h"
 
 using namespace std;
 
 class Player;
 class Square;
 
+
 class Piece {
  public:
 
   Piece(const string &color, Square *location);
+
+  Piece(Color &color, Square *location);
+
   Piece();
 
   virtual int getValue();
@@ -63,6 +68,7 @@ class Piece {
 
  private:
   string _color;
+  Color _Color;
   Square* _location;
   virtual string getPieceSymbol(); //TODO: Determine private or public? Only will be used in subclasses
   bool operator==(const Piece &piece) const

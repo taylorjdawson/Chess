@@ -22,6 +22,7 @@ class RestrictedPiece : public Piece {
   bool moveTo(Square &location, Player &byPlayer);
  protected:
   RestrictedPiece(const string &color, Square *location);
+  RestrictedPiece(Color color, Square *location);
   bool hasMoved();
  private:
 

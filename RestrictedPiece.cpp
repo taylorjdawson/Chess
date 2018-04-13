@@ -28,5 +28,10 @@ bool RestrictedPiece::hasMoved() {
   return false;
 }
 
-RestrictedPiece::RestrictedPiece(const string &color, Square *location)
+RestrictedPiece::RestrictedPiece(Color color, Square *location)
     : Piece::Piece(color, location) {}
+RestrictedPiece::RestrictedPiece(const string &color, Square *location) : Piece(
+    color,
+    location) {
+
+}

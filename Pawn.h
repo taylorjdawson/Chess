@@ -24,10 +24,11 @@ class Pawn : public RestrictedPiece {
    */
   Pawn(const string &color, Square *location);
 
+  Pawn(Color color, Square *location);
   /**
-   *
-   * @return
-   */
+     *
+     * @return
+     */
   int getValue() override;
 
   /**

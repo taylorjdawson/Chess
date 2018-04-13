@@ -6,6 +6,7 @@
 #include <limits>
 #include <regex>
 #include "Game.h"
+
 #define BLACK_FG ("\033[30m")
 #define WHITE_FG ("\033[37m")
 #define WHITE_BG ("\033[47m")
@@ -15,18 +16,19 @@ using namespace std;
 int main() {
 
 
+//  Board::getInstance()->displayColored(cout);
 
   Game::initialize();
-
-  Player* player = Game::getNextPlayer();
-  bool done = true;
-
-  while(done)
-  {
-    while(!player->makeMove()){}
-    Board::getInstance()->display(cout);
-    player = Game::getNextPlayer();
-  }
+//
+//  Player* player = Game::getNextPlayer();
+//  bool done = true;
+//
+//  while(done)
+//  {
+//    while(!player->makeMove()){}
+//    Board::getInstance()->display(cout);
+//    player = Game::getNextPlayer();
+//  }
 
 /*  std::set<int> myset;
   cout << *(myset.insert(10).first) << endl;

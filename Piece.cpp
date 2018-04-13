@@ -13,6 +13,9 @@
 Piece::Piece(const string &color, Square *location)
     : _color(color), _location(location) {}
 
+Piece::Piece(Color &color, Square *location)
+    : _Color(color), _location(location) {}
+
 Piece::Piece() = default;
 
 

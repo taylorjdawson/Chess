@@ -16,6 +16,7 @@ class King : public RestrictedPiece {
 
   King(const string &color, Square *location);
 
+  King(Color color, Square *location);
   int getValue() override;
 
   /**

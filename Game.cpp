@@ -95,8 +95,8 @@ void Game::initialize() {
 
         } else { /* It must be a Pawn */
           // Place Pawn
-          blackPiece = new Pawn(BLACK_PAWN/*Game::Color::Black*/, &squareBlack);
-          whitePiece = new Pawn(WHITE_PAWN/*Game::Color::White*/, &squareWhite);
+          blackPiece = new Pawn(Black/*Game::Color::Black*/, &squareBlack);
+          whitePiece = new Pawn(White/*Game::Color::White*/, &squareWhite);
 
         }
         squareBlack.setOccupant(*(Game::_blackPieces.insert(blackPiece).first));

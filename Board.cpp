@@ -109,6 +109,20 @@ void Board::initializeBoard() {
     }
   }
 }
+void Board::displayColored(std::ostream &os) {
+  for (int rank = 0; rank < 8; rank++) {
+    for (int file = 0; file < 8; file++) {
+      if((rank + file) % 2 == 0)
+      {
+        os << "\033[47m  ";
+      } else {
+        os << "\033[40m  ";
+      }
+    }
+    os << "\033[40m" << endl;
+  }
+
+}
 
 
 

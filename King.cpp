@@ -31,5 +31,6 @@ string King::getPieceSymbol() {
   return this->getColor() == "B" ? "♚" : "♔";
 }
 
-King::King(const string &color, Square *location) : RestrictedPiece(color,
-                                                                    location) {}
+King::King(const string &color, Square *location) : RestrictedPiece(color, location) {}
+
+King::King(Color color, Square *location) : RestrictedPiece(color, location) {}

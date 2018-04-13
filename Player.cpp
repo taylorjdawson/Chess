@@ -72,7 +72,7 @@ bool Player::makeMove() {
       cout << "Invalid move: " << move << endl;
     } else {
 
-      //TODO: Clean up variables may be redundant
+      //TODO: Clean up variables may be redundant completely
 
 
       Board *board = Board::getInstance();

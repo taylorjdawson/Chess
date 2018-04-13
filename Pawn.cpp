@@ -108,7 +108,8 @@ string Pawn::getPieceSymbol() {
 Pawn::Pawn(const string &color, Square *location) : RestrictedPiece(color,
                                                                     location) {}
 
-
+Pawn::Pawn(Color color, Square *location) : RestrictedPiece(color,
+                                                                    location) {}
 
 
 
