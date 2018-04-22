@@ -60,6 +60,21 @@ bool Board::isClearRank(Square &from, Square &to) {
 }
 
 bool Board::isClearFile(Square &from, Square &to) {
+  bool isClearFile = true;
+
+  /* Determine the direction i.e. +-1 when iterating through squares */
+  int dir = ((to.getFile() - from.getFile()) > 0) -
+      ((to.getFile() - from.getFile()) < 0);
+
+  int file = from.getFile();
+
+  /* When the absolute value between the current file and the toFile == 0
+ * then we have checked all squares up to the destination square.*/
+  while (isClearFile && abs(file - to.getFile())) {
+    file += dir;
+    isClearFile = !_squares[file][from.getRank()].isOccupied();
+  }
+
   return false;
 }
 

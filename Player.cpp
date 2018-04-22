@@ -96,7 +96,7 @@ bool Player::makeMove() {
 
 
           validMove = true;
-        } else {  
+        } else {
           cout << "Can't Move!" << endl;
         }
       } else {
