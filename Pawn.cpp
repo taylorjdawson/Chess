@@ -36,12 +36,20 @@ bool Pawn::canMoveTo(Square &location) {
 
   //CONSIDER: Excessive param variables vs just calling the 'get' functions inside the methods
   /* Check that location it is within the valid rank and file */
-  if (isWithinRank(pieceRank, location.getRank(), pieceFile, location.getFile())
+  if (isWithinRank(pieceRank,
+                   location.getRank(),
+                   pieceFile,
+                   location.getFile(),
+                   rankDir)
       &&
           isWithinFile(pieceFile, location.getFile())) {
 
     switch (getLocationIndex
-        (pieceRank, pieceFile, location.getRank(), location.getFile())) {
+        (pieceRank,
+         pieceFile,
+         location.getRank(),
+         location.getFile(),
+         rankDir)) {
       case 0:
       case 2:
         canMove = location.isOccupied() &&
@@ -60,8 +68,6 @@ bool Pawn::canMoveTo(Square &location) {
 
   /*Check that location is with in +-1 of the file to the upper left or right*/
 
-  /**/
-
   return canMove;
 }
 
@@ -70,15 +76,24 @@ bool Pawn::isWithinFile(int pawnFile, int file) {
 }
 
 //TODO: Possibly rename params
-bool Pawn::isWithinRank(int pawnRank, int rank, int pawnFile, int file) {
-  return abs(pawnRank - rank) == 1 || !hasMoved() &&
-      abs(pawnRank - rank) == 2 && pawnFile - file == 0;
+bool Pawn::isWithinRank(int pawnRank,
+                        int rank,
+                        int pawnFile,
+                        int file,
+                        int rankDir) {
+  return (rankDir * (rank - pawnRank)) == 1 || (!hasMoved() &&
+      (rankDir * (rank - pawnRank)) == 2 && pawnFile - file == 0);
 }
-//TODO: Remove abs value as this might allow pieces to move backwards
-int Pawn::getLocationIndex(int pawnRank, int pawnFile, int rank, int file) {
+
+
+int Pawn::getLocationIndex(int pawnRank,
+                           int pawnFile,
+                           int rank,
+                           int file,
+                           int rankDir) {
   int locationIndex = 0;
-  if (abs(rank - pawnRank) == 1) {
-    switch (abs(file - pawnFile)) {
+  if (rankDir * (rank - pawnRank) == 1) {
+    switch (rankDir * (file - pawnFile)) {
       case 1: locationIndex = 0;
         break;
       case 0: locationIndex = 1;
@@ -90,7 +105,6 @@ int Pawn::getLocationIndex(int pawnRank, int pawnFile, int rank, int file) {
   } else { /*next location is two squares forward*/
     locationIndex = 3;
   }
-
   return locationIndex;
 }
 

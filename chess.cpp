@@ -10,7 +10,8 @@
 #define BLACK_FG ("\033[30m")
 #define WHITE_FG ("\033[37m")
 #define WHITE_BG ("\033[47m")
-#define BLACK_BG ("\033[40m")
+#define BLACK_BG ('\033[40m')
+
 //#define
 using namespace std;
 int main() {

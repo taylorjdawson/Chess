@@ -10,6 +10,5 @@ Piece color is the number which to add to the unicode character to change its
 color or to have i remain the same color.
 Get symbol returns the symbol which to add the colour to
 
-
+- TODO: Implement Deconstructors
 - Check for check
-    -

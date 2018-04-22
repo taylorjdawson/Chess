@@ -60,14 +60,8 @@ bool Player::makeMove() {
       cout << "Invalid move: " << move << endl;
     } else {
 
-      //TODO: Clean up variables may be redundant completely
-
-
       Board *board = Board::getInstance();
 
-      /*TODO: Change to piece
-       * it might not be necessary to have a reference to a square*/
-      //TODO: Create a to and from square object
       /* Convert the algebraic notation to matrix indices */
       /*                                   TODO: Explain this         */
       Square &fromSquare = board->getSquareAt(56 - from[1], from[0] - 97);
@@ -79,9 +73,12 @@ bool Player::makeMove() {
         /* Then check that the piece can legally move to that desired location*/
         if (fromSquare.getOccupant()->canMoveTo(toSquare)) {
 
+
+          //TODO: Check for check here
+
           fromSquare.getOccupant()->setLocation(&toSquare);
           toSquare.setOccupant(fromSquare.getOccupant());
-          // ASK: Using square (initialized above doesn't work..why?)
+
           fromSquare.setOccupant(nullptr);
           validMove = true;
         } else {

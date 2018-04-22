@@ -62,7 +62,7 @@ class Pawn : public RestrictedPiece {
    * @return true if the toSquare's rank is within the valid rank and
    * false otherwise.
    */
-  bool isWithinRank(int pawnRank, int rank, int pawnFile, int file);
+  bool isWithinRank(int pawnRank, int rank, int pawnFile, int file, int rankDir);
 
   /**
    * Fabricates a location index 0-3 corresponding to the 4 possible
@@ -78,7 +78,11 @@ class Pawn : public RestrictedPiece {
    * @param file the file of the pawn's potential future location
    * @return the location index between 0 - 3
    */
-  int getLocationIndex(int pawnRank, int pawnFile, int rank, int file);
+  int getLocationIndex(int pawnRank,
+                       int pawnFile,
+                       int rank,
+                       int file,
+                       int rankDir);
 };
 
 #endif //_PAWN_H
