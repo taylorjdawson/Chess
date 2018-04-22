@@ -104,8 +104,8 @@ void Game::initialize() {
       }
     }
 
-    Game::_player = new Player("Black", *blackKing, _blackPieces);
-    Game::_nextPlayer = new Player("White", *whiteKing, _whitePieces);
+    Game::_player = new Player(Black, "Black", *blackKing, _blackPieces);
+    Game::_nextPlayer = new Player(White, "White", *whiteKing, _whitePieces);
   }
 
   _board->display(cout);

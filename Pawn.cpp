@@ -3,12 +3,16 @@
  * @author Taylor J. Dawson
  */
 
-
+//TODO: Clean this file up
 #include <iostream>
 #include "Pawn.h"
 #include "Board.h"
 #define PAWN_BLACK ("♟")
 #define PAWN_WHITE ("♙")
+#define LEFT_DIAG (0)
+#define RIGHT_DIAG (2)
+#define ONE_FORWARD (1)
+#define TWO_FORWARD (3)
 
 /**
  * Pawn implementation
@@ -29,7 +33,7 @@ bool Pawn::canMoveTo(Square &location) {
   /*If pawn is White it can only move rank + 1*/
   rankDir =
       (this->getColor() == Color::Black) ? 1
-                                         : -1; //TODO: Change color to enumeration
+                                         : -1;
 
   int pieceRank = getLocation()->getRank();
   int pieceFile = getLocation()->getFile();
@@ -43,20 +47,23 @@ bool Pawn::canMoveTo(Square &location) {
                    rankDir)
       &&
           isWithinFile(pieceFile, location.getFile())) {
-
+    //TODO: Explain
     switch (getLocationIndex
         (pieceRank,
          pieceFile,
          location.getRank(),
          location.getFile(),
          rankDir)) {
-      case 0:
-      case 2:
+      case LEFT_DIAG:
+      case RIGHT_DIAG:
+
+        /* Can only move here if the square is occupied by the opposing players
+         * piece. */
         canMove = location.isOccupied() &&
             location.getOccupant()->getColor() != getColor();
         break;
-      case 1:
-      case 3:
+      case ONE_FORWARD:
+      case TWO_FORWARD:
         canMove = Board::getInstance()->isClearRank(*getLocation(), location);
         break;
       default:break;
@@ -85,13 +92,13 @@ bool Pawn::isWithinRank(int pawnRank,
       (rankDir * (rank - pawnRank)) == 2 && pawnFile - file == 0);
 }
 
-
 int Pawn::getLocationIndex(int pawnRank,
                            int pawnFile,
                            int rank,
                            int file,
                            int rankDir) {
   int locationIndex = 0;
+  //TODO: Explain
   if (rankDir * (rank - pawnRank) == 1) {
     switch (rankDir * (file - pawnFile)) {
       case 1: locationIndex = 0;

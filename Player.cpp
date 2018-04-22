@@ -13,7 +13,10 @@ using namespace std;
 /**
  * Player implementation
  */
-Player::Player(const string &_name, King &_king, set<Piece *> &_pieces) : _name(
+Player::Player(Color color,
+               const string &_name,
+               King &_king,
+               set<Piece *> &_pieces) : _color(color), _name(
     _name), _king(_king), _pieces(_pieces) {}
 
 string Player::getName() {
@@ -22,6 +25,10 @@ string Player::getName() {
 
 King &Player::getKing() {
   return _king;
+}
+
+Color Player::getColor() {
+  return _color;
 }
 
 set<Piece *> &Player::getPieces() {
@@ -67,7 +74,7 @@ bool Player::makeMove() {
       Square &fromSquare = board->getSquareAt(56 - from[1], from[0] - 97);
       Square &toSquare = board->getSquareAt(56 - to[1], to[0] - 97);
 
-      /* First check to see if the pawn is owned by this player */
+      /* First check to see if the piece is owned by this player */
       if (_pieces.find(fromSquare.getOccupant()) != _pieces.end()) {
 
         /* Then check that the piece can legally move to that desired location*/
@@ -75,7 +82,10 @@ bool Player::makeMove() {
 
 
           //TODO: Check for check here
+          if (toSquare.isOccupied()
+              && toSquare.getOccupant()->getColor() == this->getColor()) {
 
+          }
           fromSquare.getOccupant()->setLocation(&toSquare);
           toSquare.setOccupant(fromSquare.getOccupant());
 

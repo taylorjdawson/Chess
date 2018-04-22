@@ -25,7 +25,7 @@ class Player {
    * @param _king
    * @param _pieces
    */
-  Player(const string &_name, King &_king, set<Piece *> &_pieces);
+  Player( Color color, const string &_name, King &_king, set<Piece *> &_pieces);
 
   /**
    *
@@ -63,10 +63,12 @@ class Player {
 
  private:
   string _name;
+  Color _color;
   King &_king;
   //TODO: Use hashset (unordered_set)
   set<Piece *> &_pieces;
   set<Piece *> _capturedPieces;
+  Color getColor();
 };
 
 #endif //_PLAYER_H
