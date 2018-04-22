@@ -32,8 +32,8 @@ int Knight::getValue() {
 //TODO: ADD comments here
 bool Knight::canMoveTo(Square &location) {
   bool canMoveTo = false;
-//
-//  //TODO: Replace with constants
+
+  //TODO: Replace with constants
   for(int i = 0; i < 8 && !canMoveTo; i++)
   {
       canMoveTo = getLocation()->getRank() + moves[i][RANK] == location.getRank()

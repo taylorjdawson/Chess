@@ -82,16 +82,21 @@ bool Player::makeMove() {
 
 
           //TODO: Check for check here
+
+          /* If the square is occupied by an opposing piece then TAKE it!*/
           if (toSquare.isOccupied()
               && toSquare.getOccupant()->getColor() == this->getColor()) {
-
+            cout << "Can't Move!" << endl;
           }
-          fromSquare.getOccupant()->setLocation(&toSquare);
-          toSquare.setOccupant(fromSquare.getOccupant());
+          else {
+            fromSquare.getOccupant()->setLocation(&toSquare);
+            toSquare.setOccupant(fromSquare.getOccupant());
+            fromSquare.setOccupant(nullptr);
+          }
 
-          fromSquare.setOccupant(nullptr);
+
           validMove = true;
-        } else {
+        } else {  
           cout << "Can't Move!" << endl;
         }
       } else {
