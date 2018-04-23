@@ -52,7 +52,7 @@ bool Board::isClearRank(Square &from, Square &to) {
 
   /* When the absolute value between the current rank and the toRank == 0
    * then we have checked all squares up to the destination square.*/
-  while (isClearRank && abs(rank - to.getRank())) {
+  while (isClearRank && abs(rank - to.getRank()) != 1) {
     rank += dir;
     isClearRank = !_squares[rank][from.getFile()].isOccupied();
   }
@@ -70,7 +70,7 @@ bool Board::isClearFile(Square &from, Square &to) {
 
   /* When the absolute value between the current file and the toFile == 0
  * then we have checked all squares up to the destination square.*/
-  while (isClearFile && abs(file - to.getFile())) {
+  while (isClearFile && abs(file - to.getFile()) != 1) {
     file += dir;
     isClearFile = !_squares[file][from.getRank()].isOccupied();
   }
@@ -79,13 +79,34 @@ bool Board::isClearFile(Square &from, Square &to) {
 }
 
 bool Board::isClearDiagonal(Square &from, Square &to) {
-  return false;
+  bool isClearDiagonal = true;
+
+  int run = to.getFile() - from.getFile();
+  int rise = to.getRank() - from.getRank();
+  int rank = from.getRank();
+  int file = from.getFile();
+
+  int dirFile = ((to.getFile() - from.getFile()) > 0) -
+      ((to.getFile() - from.getFile()) < 0);
+  int dirRank = ((to.getRank() - from.getRank()) > 0) -
+      ((to.getRank() - from.getRank()) < 0);
+
+//  printf("(%d, %d)\n", dirRank, dirFile);
+
+  while(isClearDiagonal && rank < to.getRank())
+  {
+    file+=dirFile;
+    rank+=dirRank;
+    isClearDiagonal = !_squares[rank][file].isOccupied();
+  }
+
+    return isClearDiagonal;
 }
 
 void Board::display(ostream &os) {
   const string board_header_letters = "    a   b   c   d   e   f   g   h";
   const string board_header = "  ┌───┬───┬───┬───┬───┬───┬───┬───┐";
-  const string row_divider =  "  ├───┼───┼───┼───┼───┼───┼───┼───┤";
+  const string row_divider = "  ├───┼───┼───┼───┼───┼───┼───┼───┤";
   const string board_footer = "  └───┴───┴───┴───┴───┴───┴───┴───┘";
   int file = 0;
   os << board_header_letters << '\n' << board_header << endl;

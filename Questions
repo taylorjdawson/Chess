@@ -4,11 +4,18 @@
 - References versus pointer null pointers initialisation
 
 
-Notes
+Notes:
 
 Piece color is the number which to add to the unicode character to change its
 color or to have i remain the same color.
 Get symbol returns the symbol which to add the colour to
 
+- FIXME: Floating point exception bishop c1 to c3 moving a diagonal piece rank or file
 - TODO: Implement Deconstructors
 - Check for check
+
+(-1,  1),
+( 1,  1),
+(-1, -1),
+( 1, -1)
+

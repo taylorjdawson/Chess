@@ -5,6 +5,8 @@
 
 
 #include "Queen.h"
+
+
 #define PIECE_SYMBOL ("Q")
 
 /**
@@ -24,6 +26,9 @@ int Queen::getValue() {
  * @return boolean
  */
 bool Queen::canMoveTo(Square &location) {
+
+  /*Determine if it is a rank/file move (Rook) */
+
   return false;
 }
 
@@ -31,4 +36,7 @@ string Queen::getPieceSymbol() {
   return this->getColor() == Color::Black  ? "♛" : "♕";
 }
 
-Queen::Queen(Color color, Square *location) : Piece(color, location) {}
+Queen::Queen(Color color, Square *location) : Piece(color, location) {
+//  rookDelegate = new Rook(color, location);
+//  bishopDelegate = new Bishop
+}

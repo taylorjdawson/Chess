@@ -20,13 +20,15 @@ bool Rook::canMoveTo(Square &location) {
   int run = getLocation()->getFile() - location.getFile();
   int rise = getLocation()->getRank() - location.getRank();
 
-  if (run == 0 && Board::getInstance()->isClearFile(*getLocation(), location)) {
+// ROW printf("Run: %d; isClearFile:%d \n", run, Board::getInstance()->isClearFile(*getLocation(), location));
+//  ROW printf("Rise: %d; isClearRank:%d \n", rise, Board::getInstance()->isClearRank(*getLocation(), location));
+
+  if (run == 0 && Board::getInstance()->isClearRank(*getLocation(), location)) {
     canMoveTo = true;
   } else if (rise == 0
-      && Board::getInstance()->isClearRank(*getLocation(), location)) {
+      && Board::getInstance()->isClearFile(*getLocation(), location)) {
     canMoveTo = true;
   }
-
   return canMoveTo;
 }
 

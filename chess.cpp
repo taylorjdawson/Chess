@@ -23,8 +23,9 @@ int main() {
 
   Player* player = Game::getNextPlayer();
   bool done = true;
+  int moves = 0;
 
-  while(done)
+  while(moves++ < 4)
   {
     while(!player->makeMove()){}
     Board::getInstance()->display(cout);

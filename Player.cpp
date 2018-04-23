@@ -81,6 +81,7 @@ bool Player::makeMove() {
         if (fromSquare.getOccupant()->canMoveTo(toSquare)) {
 
 
+
           //TODO: Check for check here
 
           /* If the square is occupied by an opposing piece then TAKE it!*/
@@ -93,7 +94,6 @@ bool Player::makeMove() {
             toSquare.setOccupant(fromSquare.getOccupant());
             fromSquare.setOccupant(nullptr);
           }
-
 
           validMove = true;
         } else {

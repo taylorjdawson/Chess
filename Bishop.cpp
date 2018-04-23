@@ -4,6 +4,7 @@
  */
 
 #include "Bishop.h"
+#include "Board.h"
 
 /**
  * Bishop implementation
@@ -15,7 +16,13 @@ int Bishop::getValue() {
 }
 
 bool Bishop::canMoveTo(Square &location) {
-  return false;
+  int run = getLocation()->getFile() - location.getFile();
+  int rise = getLocation()->getRank() - location.getRank();
+//  printf("%d / %d = %d\n", rise, run, abs(rise/run));
+  printf("isClearDiagonal = %d", abs(rise/run) == 1 && Board::getInstance()->isClearDiagonal
+      (*getLocation(), location));
+  return abs(rise/run) == 1 && Board::getInstance()->isClearDiagonal
+      (*getLocation(), location);
 }
 
 string Bishop::getPieceSymbol() {
